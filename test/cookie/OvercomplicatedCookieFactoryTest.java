@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class OvercomplicatedCookieFactoryTest {
 
@@ -12,9 +14,15 @@ public class OvercomplicatedCookieFactoryTest {
 
     @BeforeEach
     public void beforeEach() {
-         cookieFactory = new OvercomplicatedCookieFactory(
-                Collections.singletonList("Вам повезёт!"),
-                Collections.singletonList("Сегодня будет дождь"),
+        ArrayList<String> positiveTexts = new ArrayList<>();
+        positiveTexts.add("Вам повезёт!");
+
+        ArrayList<String> negativeTexts = new ArrayList<>();
+        negativeTexts.add("Сегодня будет дождь");
+
+        cookieFactory = new OvercomplicatedCookieFactory(
+                positiveTexts,
+                negativeTexts,
                 true
         );
     }

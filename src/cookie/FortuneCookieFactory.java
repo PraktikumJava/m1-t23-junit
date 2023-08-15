@@ -1,5 +1,6 @@
 package cookie;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -9,10 +10,10 @@ public class FortuneCookieFactory {
         private int cookiesBaked = 0;
 
         private final Random rnd = new Random();
-        private final List<String> goodFortune;
-        private final List<String> badFortune;
+        private final ArrayList<String> goodFortune;
+        private final ArrayList<String> badFortune;
 
-        public FortuneCookieFactory(FortuneConfig fortuneConfig, List<String> goodFortune, List<String> badFortune) {
+        public FortuneCookieFactory(FortuneConfig fortuneConfig, ArrayList<String> goodFortune, ArrayList<String> badFortune) {
                 this.fortuneConfig = fortuneConfig;
                 this.goodFortune = goodFortune;
                 this.badFortune = badFortune;
