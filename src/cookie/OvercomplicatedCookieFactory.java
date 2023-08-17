@@ -1,12 +1,13 @@
 package cookie;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class OvercomplicatedCookieFactory {
     private int cookiesCreated = 0;
-    private final List<String> positiveTexts;
-    private final List<String> negativeTexts;
+    private final ArrayList<String> positiveTexts;
+    private final ArrayList<String> negativeTexts;
     private final boolean isPositive;
 
     /** Класс Random возвращает «псевдо-случайные» числа. Здесь он используется, чтобы возвращать случайное предсказание
@@ -14,8 +15,8 @@ public class OvercomplicatedCookieFactory {
     private final Random rnd = new Random();
 
     public OvercomplicatedCookieFactory(
-        List<String> positiveTexts,
-        List<String> negativeTexts,
+        ArrayList<String> positiveTexts,
+        ArrayList<String> negativeTexts,
         boolean isPositive
     ) {
         this.positiveTexts = positiveTexts;

@@ -24,9 +24,6 @@ public class BankAccount {
     }
 
     public Integer getAmount() {
-        if (amount == null) {
-            throw new IllegalStateException("Счёт не активирован.");
-        }
         return this.amount;
     }
 
